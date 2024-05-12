@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Monstserrat', sans-serif;
+    font-size: 14px;
+}
+
+:root {
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-cyan: hsl(156, 42%, 18%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    min-width: 300px;
+    max-width: 355px;
+    
+    
+}
+
+.image {
+    width: 100%;
+    height: 20em;
+    background-image:url(../assets/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 30px;
+    color: var(--dark-grayish-blue);
+    border-radius: 0 0 10px 10px;
+    gap: 20px;
+    min-width: 250px;
+    max-width: 365px;
+}
+.perfume {
+    font-size: 14px;
+    letter-spacing: 5px;
+
+}
+.content > h1 {
+    font-family: 'Fraunces';
+    color: var(--very-dark-blue);
+    font-size: 32px;
+}
+
+.content p {
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+.values {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.values b {
+    
+    font-family: 'Fraunces' ;
+    font-size: 30px;
+    color: var(--dark-cyan);
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    cursor: pointer;
+    padding-block: 15px;
+    border-radius: 10px;
+    align-items: center;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.cart:hover {
+    background-color: var(--very-dark-cyan);
+}
+.cart img {
+    padding-inline-end: 10px;
+}
+
+@media screen and (min-width: 680px){
+    .container {
+        flex-direction: row;
+        height: auto;
+
+        max-width: none;
+    }
+    .image {
+        height: 100%;
+        width: 20em;
+        max-width: none;
+        border-radius: 10px 0 0px 10px;
+        background-image: url(../assets/image-product-desktop.jpg);
+    }
+    .content {
+        border-radius: 0 10px 10px 0;
+        max-width: 300px;
+    }
+}
